@@ -31,6 +31,5 @@ def process_downloaded_era5(input_dir_tas, input_dir_seaiceconc, output_dir):
         )
 
         regridded_data = xr.merge([regridded_seaiceconc, regridded_tas])
-
         regridded_data.to_netcdf(f"{output_dir}/{year_value}.nc")
-    return "Good"
+    return "Process Finished!"
